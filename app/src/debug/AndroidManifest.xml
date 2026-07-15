@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
-        <!-- Debug builds only: lets adb simulate elapsed countdown time -->
+        <!-- Debug builds only: lets adb simulate widget time events -->
         <receiver
             android:name=".DebugStateReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.blankparticle.countdown.DEBUG_SET_ELAPSED" />
+                <action android:name="com.blankparticle.countdown.DEBUG_DAY_PASSED" />
+                <action android:name="com.blankparticle.countdown.DEBUG_REFRESH" />
             </intent-filter>
         </receiver>
     </application>

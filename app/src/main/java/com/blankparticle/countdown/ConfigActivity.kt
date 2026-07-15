@@ -251,7 +251,7 @@ class ConfigActivity : ComponentActivity() {
                 prefs[CountdownWidget.KEY_CREATED_EPOCH_DAY] = LocalDate.now().toEpochDay()
             }
             CountdownWidget().update(context, glanceId)
-            MidnightWorker.schedule(context)
+            MidnightAlarm.schedule(context)
 
             setResult(
                 RESULT_OK,

@@ -37,6 +37,7 @@ class CountdownWidget : GlanceAppWidget() {
         val KEY_TARGET_EPOCH_DAY = longPreferencesKey("target_epoch_day")
         val KEY_CREATED_EPOCH_DAY = longPreferencesKey("created_epoch_day")
         val KEY_TITLE = stringPreferencesKey("title")
+        val KEY_LAST_REFRESH_DAY = longPreferencesKey("last_refresh_day")
     }
 
     override suspend fun provideGlance(context: Context, id: GlanceId) {

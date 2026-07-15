@@ -15,11 +15,11 @@ class CountdownWidgetReceiver : GlanceAppWidgetReceiver() {
         appWidgetIds: IntArray
     ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
-        MidnightWorker.schedule(context)
+        MidnightAlarm.schedule(context)
     }
 
     override fun onDisabled(context: Context) {
         super.onDisabled(context)
-        MidnightWorker.cancel(context)
+        MidnightAlarm.cancel(context)
     }
 }
